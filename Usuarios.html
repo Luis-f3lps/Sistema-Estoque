@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/icone3.png" type="image/png">
+    <title>Inventário Produtos Químicos</title>
+    <link rel="stylesheet" href="css/style3.css">
+    <script src="https://kit.fontawesome.com/915b45d802.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!------------------Usuarios--------------->
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <img src="images/logomenu.png" class="logo">
+                </br></br>
+                <li><a href="Relatorio.html"><i class="fa-regular fa-newspaper"></i> Relatórios</a></li>
+                <li><a href="Produtos.html"><i class="fa-regular fa-clipboard"></i> Produtos</a></li>
+                <li><a href="Usuarios.html"><i class="fa-regular fa-user"></i> Usuarios</a></li>
+            </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+        <div id="about"> 
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-2">
+                        <h1 class="sub-title">Usuários</h1>
+                        </br>                        
+                        <div class="tab-titles">
+                            <p class="tab-links  active-link" onclick="opentab('todos')">Todos os Usuário</p>
+                            <p class="tab-links" onclick="opentab('Skills')">Adicionar Usuário</p>
+                            <p class="tab-links" onclick="opentab('Education')">Remover Usuário</p>
+                        </div>
+        
+                        <div class="tab-contents active-tab" id="todos">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Email</th>
+                                        <th>Telefone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>João Silva</td>
+                                        <td>joao.silva@example.com</td>
+                                        <td>(11) 1234-5678</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maria Santos</td>
+                                        <td>maria.santos@example.com</td>
+                                        <td>(11) 2345-6789</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carlos Oliveira</td>
+                                        <td>carlos.oliveira@example.com</td>
+                                        <td>(11) 3456-7890</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ana Costa</td>
+                                        <td>ana.costa@example.com</td>
+                                        <td>(11) 4567-8901</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rafaela Almeida</td>
+                                        <td>rafaela.almeida@example.com</td>
+                                        <td>(11) 5678-9012</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fernando Martins</td>
+                                        <td>fernando.martins@example.com</td>
+                                        <td>(11) 6789-0123</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sandra Pereira</td>
+                                        <td>sandra.pereira@example.com</td>
+                                        <td>(11) 7890-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paulo Oliveira</td>
+                                        <td>paulo.oliveira@example.com</td>
+                                        <td>(11) 8901-2345</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                        <div class="tab-contents" id="Skills">
+                            <div class="form-container">
+                                <h2>Adicionar Usuário</h2>
+                                </br>
+                                <form id="add-user-form">
+                                    <div class="form-group">
+                                        <label for="username">Nome de Usuário:</label>
+                                        <input type="text" id="username" name="username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Senha:</label>
+                                        <input type="password" id="password" name="password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirm-password">Confirmar Senha:</label>
+                                        <input type="password" id="confirm-password" name="confirm-password" required>
+                                    </div>
+                                    <button type="submit">Adicionar Usuário</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <div class="form-container">
+                                <h1>Remover Usuário</h1>
+                            </br>
+                            </br>
+                                <form id="add-produto">
+                                    <form action="processar_adicao.php" method="POST"> <!-- Ajuste o atributo "action" conforme necessário -->
+                                        <label for="usuarios">Selecione um usuário:</label>
+                                        <select id="usuarios" name="usuarios">
+                                            <option value="joao_silva">João Silva</option>
+                                            <option value="maria_santos">Maria Santos</option>
+                                            <option value="carlos_oliveira">Carlos Oliveira</option>
+                                            <option value="ana_costa">Ana Costa</option>
+                                            <option value="rafaela_almeida">Rafaela Almeida</option>
+                                            <option value="fernando_martins">Fernando Martins</option>
+                                            <option value="sandra_pereira">Sandra Pereira</option>
+                                            <option value="paulo_oliveira">Paulo Oliveira</option>
+                                        </select>
+                                    </br></br></br>
+                                        <button type="submit" class="btn-remover">Remover Produto</button>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
+
+
+<script>
+    // Pega todos os elementos com a classe "tab-links" e "tab-contents"
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    //abre uma aba específica
+    function opentab(tabname) {
+        // Loop para remover a classe "active-link" de todos os links das abas
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+        // Mesma coisa da de cima só que com "active-tab" 
+        for (var i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+            // Se o id for igual ao nome da aba, adiciona a classe "active-tab" a esse trem para mostrar
+            if (tabcontents[i].id === tabname) {
+                tabcontents[i].classList.add("active-tab");
+            }
+        }
+        // Adiciona a classe "active-link" ao link da aba que foi clicada
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
+</body>
+</html>
