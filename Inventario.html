@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/icone3.png" type="image/png">
+    <title>Inventário Produtos Químicos</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="https://kit.fontawesome.com/915b45d802.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!------------------Relatórios--------------->
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <img src="images/logomenu.png" class="logo">
+                </br></br>
+                <li><a href="Inventario.html">Inventário</a></li>
+                <li><a href="Relatorio.html">Relatórios</a></li>
+                <li><a href="Produtos.html">Produtos</a></li>
+                <li><a href="Usuarios.html">Usuários</a></li>
+                <li><a href="Fornecedores.html">Fornecedores</a></li>
+                <li><a href="Laboratorio.html">Laboratórios</a></li>
+                </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+            
+        </nav>
+        <div id="about"> 
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-2">
+                        <h1 class="sub-title">Inventário</h1>
+                        </br>                        
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('todos')">Inventário Geral</p>
+                            <p class="tab-links" onclick="opentab('Education2')">Inventário por Laboratório</p>
+                        </div>
+        
+
+                        <div class="tab-contents  active-tab" id="todos">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Produto Químico</th>
+                                        <th>Quantidade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ácido Sulfúrico</td>
+                                        <td class="numeric">1000 litros</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hidróxido de Sódio</td>
+                                        <td class="numeric">500 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nitrogênio Líquido</td>
+                                        <td class="numeric">2000 litros</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cloreto de Sódio</td>
+                                        <td class="numeric">300 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ácido Clorídrico</td>
+                                        <td class="numeric">800 litros</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peróxido de Hidrogênio</td>
+                                        <td class="numeric">600 litros</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ácido Nítrico</td>
+                                        <td class="numeric">700 litros</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sulfato de Cobre</td>
+                                        <td class="numeric">400 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cloro Gasoso</td>
+                                        <td class="numeric">1500 litros</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hidróxido de Amônio</td>
+                                        <td class="numeric">350 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ácido Fórmico</td>
+                                        <td class="numeric">900 litros</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sulfato de Magnésio</td>
+                                        <td class="numeric">250 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hidróxido de Potássio</td>
+                                        <td class="numeric">550 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Óxido de Zinco</td>
+                                        <td class="numeric">200 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hipoclorito de Sódio</td>
+                                        <td class="numeric">1200 litros</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="print-button" onclick="window.print()"><i class="fa-solid fa-print"></i> Imprimir</button>
+                        </div>
+                        <div class="tab-contents" id="Education2">
+                            <select name="nomes" id="nomes">
+                                <option value="joao_silva">Laboratório Quimica</option>
+                                <option value="joao_silva">Laboratório Fisica</option>
+                                <option value="joao_silva">Laboratório Anotomia</option>
+                                <option value="joao_silva">Laboratório Fotositese</option>
+                                <option value="joao_silva">Laboratório Biologia</option>
+                            </select>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Produto Químico</th>
+                                        <th>Quantidade</th>
+                                        <th>Responsável</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ácido Sulfúrico</td>
+                                        <td>100 litros</td>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hidróxido de Sódio</td>
+                                        <td>50 kg</td>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ácido Clorídrico</td>
+                                        <td>80 litros</td>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ácido Sulfúrico</td>
+                                        <td>100 litros</td>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hidróxido de Sódio</td>
+                                        <td>50 kg</td>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ácido Clorídrico</td>
+                                        <td>80 litros</td>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sulfato de Cobre</td>
+                                        <td>30 kg</td>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hipoclorito de Sódio</td>
+                                        <td>60 litros</td>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sulfato de Cobre</td>
+                                        <td>30 kg</td>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hipoclorito de Sódio</td>
+                                        <td>60 litros</td>
+                                        <td>João</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="print-button" onclick="window.print()"><i class="fa-solid fa-print"></i> Imprimir</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+<script>
+    // Pega todos os elementos com a classe "tab-links" e "tab-contents"
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    //abre uma aba específica
+    function opentab(tabname) {
+        // Loop para remover a classe "active-link" de todos os links das abas
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+        // Mesma coisa da de cima só que com "active-tab" 
+        for (var i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+            // Se o id for igual ao nome da aba, adiciona a classe "active-tab" a esse trem para mostrar
+            if (tabcontents[i].id === tabname) {
+                tabcontents[i].classList.add("active-tab");
+            }
+        }
+        // Adiciona a classe "active-link" ao link da aba que foi clicada
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
+</body>
+</html>

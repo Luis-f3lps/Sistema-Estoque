@@ -125,7 +125,6 @@ nav ul li a:hover::after{
     color: #ff004f;
 }
 button {
-    width: 100%;
     padding: 10px;
     border: none;
     border-radius: 4px;

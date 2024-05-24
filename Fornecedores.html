@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/icone3.png" type="image/png">
+    <title>Inventário Produtos Químicos</title>
+    <link rel="stylesheet" href="css/style3.css">
+    <script src="https://kit.fontawesome.com/915b45d802.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!------------------Usuarios--------------->
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <img src="images/logomenu.png" class="logo">
+                </br></br>
+                <li><a href="Inventario.html">Inventário</a></li>
+                <li><a href="Relatorio.html">Relatórios</a></li>
+                <li><a href="Produtos.html">Produtos</a></li>
+                <li><a href="Usuarios.html">Usuários</a></li>
+                <li><a href="Fornecedores.html">Fornecedores</a></li>
+                <li><a href="Laboratorio.html">Laboratórios</a></li>
+            </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+        <div id="about"> 
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-2">
+                        <h1 class="sub-title">Fornecedores</h1>
+                        </br>                        
+                        <div class="tab-titles">
+                            <p class="tab-links  active-link" onclick="opentab('todos')">Todos os Fornecedores</p>
+                            <p class="tab-links" onclick="opentab('Skills')">Adicionar Fornecedores</p>
+                            <p class="tab-links" onclick="opentab('Education')">Remover Fornecedores</p>
+                        </div>
+        
+                        <div class="tab-contents active-tab" id="todos">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nome do Fornecedor</th>
+                                        <th>Email</th>
+                                        <th>Telefone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ABC Chemicals</td>
+                                        <td>abc@example.com</td>
+                                        <td>(11) 1234-5678</td>
+                                    </tr>
+                                    <tr>
+                                        <td>XYZ Supplies</td>
+                                        <td>xyz@example.com</td>
+                                        <td>(11) 2345-6789</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chemical Solutions Co.</td>
+                                        <td>chemicals@example.com</td>
+                                        <td>(11) 3456-7890</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ChemicalWorld</td>
+                                        <td>chemicalworld@example.com</td>
+                                        <td>(11) 4567-8901</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Global Chemical Suppliers</td>
+                                        <td>globalchem@example.com</td>
+                                        <td>(11) 5678-9012</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chemical Express</td>
+                                        <td>chemexpress@example.com</td>
+                                        <td>(11) 6789-0123</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chemical Depot</td>
+                                        <td>chemdepot@example.com</td>
+                                        <td>(11) 7890-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chemical Warehouse</td>
+                                        <td>chemwarehouse@example.com</td>
+                                        <td>(11) 8901-2345</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                        <div class="tab-contents" id="Skills">
+                            <div class="form-container">
+                                <h2>Adicionar Fornecedor</h2>
+                                </br>
+                                <form id="add-user-form">
+                                    <div class="form-group">
+                                        <label for="username">Nome de Fornecedor:</label>
+                                        <input type="text" id="username" name="username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <button type="submit">Adicionar Usuário</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <div class="form-container">
+                                <h1>Remover Fornecedor</h1>
+                            </br>
+                            </br>
+                                <form id="add-produto">
+                                    <form action="processar_adicao.php" method="POST"> <!-- Ajuste o atributo "action" conforme necessário -->
+                                        <label for="usuarios">Selecione um usuário:</label>
+                                        <select id="usuarios" name="usuarios">
+                                            <option value="joao_silva">João Silva</option>
+                                            <option value="maria_santos">Maria Santos</option>
+                                            <option value="carlos_oliveira">Carlos Oliveira</option>
+                                            <option value="ana_costa">Ana Costa</option>
+                                            <option value="rafaela_almeida">Rafaela Almeida</option>
+                                            <option value="fernando_martins">Fernando Martins</option>
+                                            <option value="sandra_pereira">Sandra Pereira</option>
+                                            <option value="paulo_oliveira">Paulo Oliveira</option>
+                                        </select>
+                                    </br></br></br>
+                                        <button type="submit" class="btn-remover">Remover Fornecedor</button>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
+
+
+<script>
+    // Pega todos os elementos com a classe "tab-links" e "tab-contents"
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    //abre uma aba específica
+    function opentab(tabname) {
+        // Loop para remover a classe "active-link" de todos os links das abas
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+        // Mesma coisa da de cima só que com "active-tab" 
+        for (var i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+            // Se o id for igual ao nome da aba, adiciona a classe "active-tab" a esse trem para mostrar
+            if (tabcontents[i].id === tabname) {
+                tabcontents[i].classList.add("active-tab");
+            }
+        }
+        // Adiciona a classe "active-link" ao link da aba que foi clicada
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
+</body>
+</html>
