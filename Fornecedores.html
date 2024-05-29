@@ -15,15 +15,22 @@
         <nav>
             <ul id="sidemenu">
                 <img src="images/logomenu.png" class="logo">
-                </br></br>
-                <li><a href="Inventario.html">Inventário</a></li>
-                <li><a href="Relatorio.html">Relatórios</a></li>
-                <li><a href="Produtos.html">Produtos</a></li>
-                <li><a href="Usuarios.html">Usuários</a></li>
-                <li><a href="Fornecedores.html">Fornecedores</a></li>
-                <li><a href="Laboratorio.html">Laboratórios</a></li>
-            </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
-                <li><a href="index.html">Sair</a></li>
+                </br>
+                <li><a href="Perfil.html" style="border-bottom: 1px solid;"><i class="fas fa-user"></i> Luis Gustavo</a></li>
+                </br>
+                <li><a href="Inventario.html"><i class="fas fa-boxes"></i> Inventário</a></li>
+                <li><a href="Relatorio.html"><i class="fas fa-chart-line"></i> Relatórios</a></li>
+                <li class="submenu">
+                    <a href="#"><i class="fas fa-user-shield"></i> Administração <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu-items">
+                        <li><a href="Usuarios.html"><i class="fas fa-users"></i> Usuários</a></li>
+                        <li><a href="Produtos.html"><i class="fas fa-tags"></i> Produtos</a></li>
+                        <li><a href="Fornecedores.html"><i class="fas fa-truck"></i> Fornecedores</a></li>
+                        <li><a href="Laboratorio.html"><i class="fas fa-flask"></i> Laboratórios</a></li>
+                    </ul>
+                </li>
+                </br>
+                <li class="logout"><a href="index.html" style="border-top: 1px solid;"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
             </ul>
         </nav>
         <div id="about"> 
@@ -141,7 +148,6 @@
     </div>    
 </div>
 
-
 <script>
     // Pega todos os elementos com a classe "tab-links" e "tab-contents"
     var tablinks = document.getElementsByClassName("tab-links");
@@ -163,6 +169,17 @@
         // Adiciona a classe "active-link" ao link da aba que foi clicada
         event.currentTarget.classList.add("active-link");
     }
+</script>
+
+<script>
+    document.querySelectorAll('.submenu > a').forEach(menu => {
+        menu.addEventListener('click', function(e) {
+            e.preventDefault();
+            const submenuItems = this.nextElementSibling;
+            submenuItems.classList.toggle('open');
+            this.querySelector('.fas.fa-chevron-down').classList.toggle('rotate');
+        });
+    });
 </script>
 </body>
 </html>
