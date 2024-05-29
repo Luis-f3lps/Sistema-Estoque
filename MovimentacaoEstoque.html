@@ -47,11 +47,12 @@
         
                         <div class="tab-contents  active-tab" id="Skills">
                             <div class="form-container">
-                                <h1>Adicionar Produto</h1>
+                                <h1>Registrar Consumo</h1>
                             </br>
                                 <form id="add-produto">
                                     <form action="processar_adicao.php" method="POST"> 
                                         <div class="form-group">
+                                            <label for="id_pf">Produto:</label>
                                             <select name="produtos" id="produtos">
                                             <option value="acido_cloridrico">Ácido Clorídrico</option>
                                             <option value="hidroxido_sodio">Hidróxido de Sódio</option>
@@ -75,6 +76,7 @@
                                             <input type="text" id="id_pf" name="id_pf" required>
                                         </div>
                                         <div class="form-group">
+                                            <label for="id_pf">Laboratorio:</label>
                                             <select name="produtos" id="produtos">
                                             <option value="acido_cloridrico">Quimica</option>
                                             <option value="hidroxido_sodio">Fisica</option>
@@ -82,38 +84,53 @@
                                             <option value="nitrato_prata">Biologia</option>
                                         </select>
                                         </div>
-                                        <button type="submit">Adicionar Produto</button>
+                                        <button type="submit">Registrar</button>
                                 </form>
                             </div>
                             
                         </div>
                         <div class="tab-contents" id="Education">
                             <div class="form-container">
-                                <h1>Remover Produto</h1>
+                                <h1>Registrar Entrada</h1>
                             </br>
                             </br>
-                                <form id="add-produto">
-                                    <form action="processar_adicao.php" method="POST"> 
+                            <form id="add-produto">
+                                <form action="processar_adicao.php" method="POST"> 
+                                    <div class="form-group">
+                                        <label for="id_pf">Produto:</label>
                                         <select name="produtos" id="produtos">
-                                            <option value="acido_cloridrico">Ácido Clorídrico</option>
-                                            <option value="hidroxido_sodio">Hidróxido de Sódio</option>
-                                            <option value="sulfato_cobre">Sulfato de Cobre</option>
-                                            <option value="nitrato_prata">Nitrato de Prata</option>
-                                            <option value="peroxido_hidrogenio">Peróxido de Hidrogênio</option>
-                                            <option value="acido_sulfurico">Ácido Sulfúrico</option>
-                                            <option value="cloro">Cloro</option>
-                                            <option value="sulfato_amonio">Sulfato de Amônio</option>
-                                            <option value="hipoclorito_sodio">Hipoclorito de Sódio</option>
-                                            <option value="acido_nitrico">Ácido Nítrico</option>
-                                            <option value="oxido_zinco">Óxido de Zinco</option>
-                                            <option value="fluoreto_sodio">Fluoreto de Sódio</option>
-                                            <option value="cloreto_calcio">Cloreto de Cálcio</option>
-                                            <option value="carbonato_calcio">Carbonato de Cálcio</option>
-                                            <option value="hidroxido_amonio">Hidróxido de Amônio</option>
-                                        </select>
-                                    </br></br></br>
-                                        <button type="submit" class="btn-remover">Remover Produto</button>
-                                </form>
+                                        <option value="acido_cloridrico">Ácido Clorídrico</option>
+                                        <option value="hidroxido_sodio">Hidróxido de Sódio</option>
+                                        <option value="sulfato_cobre">Sulfato de Cobre</option>
+                                        <option value="nitrato_prata">Nitrato de Prata</option>
+                                        <option value="peroxido_hidrogenio">Peróxido de Hidrogênio</option>
+                                        <option value="acido_sulfurico">Ácido Sulfúrico</option>
+                                        <option value="cloro">Cloro</option>
+                                        <option value="sulfato_amonio">Sulfato de Amônio</option>
+                                        <option value="hipoclorito_sodio">Hipoclorito de Sódio</option>
+                                        <option value="acido_nitrico">Ácido Nítrico</option>
+                                        <option value="oxido_zinco">Óxido de Zinco</option>
+                                        <option value="fluoreto_sodio">Fluoreto de Sódio</option>
+                                        <option value="cloreto_calcio">Cloreto de Cálcio</option>
+                                        <option value="carbonato_calcio">Carbonato de Cálcio</option>
+                                        <option value="hidroxido_amonio">Hidróxido de Amônio</option>
+                                    </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id_pf">Quantidade:</label>
+                                        <input type="text" id="id_pf" name="id_pf" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id_pf">Laboratorio:</label>
+                                        <select name="produtos" id="produtos">
+                                        <option value="acido_cloridrico">Quimica</option>
+                                        <option value="hidroxido_sodio">Fisica</option>
+                                        <option value="sulfato_cobre">Anatomia</option>
+                                        <option value="nitrato_prata">Biologia</option>
+                                    </select>
+                                    </div>
+                                    <button type="submit">Registrar</button>
+                            </form>
                             </div>
                         </div>
                         </div>
